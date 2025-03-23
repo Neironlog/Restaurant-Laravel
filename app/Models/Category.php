@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Category extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['title', 'description'];
 
-    public function restaurant() :BelongsTo
+    public function restaurant(): BelongsTo
     {
         return $this->belongsTo(Restaurant::class);
     }

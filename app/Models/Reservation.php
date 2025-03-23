@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
 {
-    protected $guarded = [];
+    protected $fillable = ['status', 'reservated_at'];
 
     public function table()
     {
         return $this->belongsTo(Table::class);
     }
-
 }

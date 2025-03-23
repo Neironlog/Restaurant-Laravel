@@ -7,10 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Table extends Model
 {
-    /** @use HasFactory<\Database\Factories\TableFactory> */
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['table_number', 'capacity', 'status'];
 
     public function restaurant()
     {

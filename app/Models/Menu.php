@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    /** @use HasFactory<\Database\Factories\MenuFactory> */
     use HasFactory;
-    protected $guarded = [];
+    
+    protected $fillable = ['title', 'description', 'image', 'available'];
 
     public function restaurant()
     {
@@ -20,5 +20,4 @@ class Menu extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
 }
